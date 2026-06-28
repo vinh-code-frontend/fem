@@ -1,0 +1,20 @@
+{
+  "name": "fem",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:vue": "npm run dev --workspace=apps/vue",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.0",
+    "@types/node": "^24.13.2",
+    "vite": "^8.1.0",
+    "typescript": "~6.0.2"
+  },
+  "packageManager": "npm@11.12.1"
+}
