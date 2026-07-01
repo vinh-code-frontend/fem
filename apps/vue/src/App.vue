@@ -1,7 +1,7 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue';
-</script>
-
 <template>
-  <HelloWorld />
+  <div class="flex">
+    <div>App</div>
+    <div>App</div>
+    <div>App</div>
+  </div>
 </template>

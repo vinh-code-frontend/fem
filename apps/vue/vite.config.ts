@@ -1,12 +1,14 @@
-import { defineConfig } from 'vite';
+import { defineConfig, mergeConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
+import { sharedConfig } from '../../vite.config.ts';
 
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [vue()],
-
-  build: {
-    outDir: '../../dist/vue',
-    emptyOutDir: true,
-  },
-});
+export default mergeConfig(
+  sharedConfig,
+  defineConfig({
+    plugins: [vue()],
+    build: {
+      outDir: '../../dist/vue',
+      emptyOutDir: true,
+    },
+  }),
+);

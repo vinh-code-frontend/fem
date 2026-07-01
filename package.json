@@ -29,5 +29,9 @@
     "typescript": "~6.0.2",
     "vite": "^8.1.0"
   },
-  "packageManager": "npm@11.12.1"
+  "packageManager": "npm@11.12.1",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.2",
+    "tailwindcss": "^4.3.2"
+  }
 }

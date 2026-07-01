@@ -1,12 +1,14 @@
-import { defineConfig } from 'vite';
+import { defineConfig, mergeConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { sharedConfig } from '../../vite.config.ts';
 
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [react()],
-
-  build: {
-    outDir: '../../dist/react',
-    emptyOutDir: true,
-  },
-});
+export default mergeConfig(
+  sharedConfig,
+  defineConfig({
+    plugins: [react()],
+    build: {
+      outDir: '../../dist/react',
+      emptyOutDir: true,
+    },
+  }),
+);
