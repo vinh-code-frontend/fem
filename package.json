@@ -5,16 +5,28 @@
     "apps/*",
     "packages/*"
   ],
+  "type": "module",
   "scripts": {
     "dev:vue": "npm run dev --workspace=apps/vue",
-    "build": "pnpm -r build",
-    "lint": "pnpm -r lint"
+    "dev:react": "npm run dev --workspace=apps/react",
+    "build": "npm run build --workspaces",
+    "build:vue": "npm run build --workspace=apps/vue",
+    "build:react": "npm run build --workspace=apps/react",
+    "clean": "tsx scripts/clean-dist.ts",
+    "clean:react": "tsx scripts/clean-dist.ts react",
+    "clean:vue": "tsx scripts/clean-dist.ts vue",
+    "lint": "npm run lint --workspaces",
+    "prepare": "husky"
   },
   "devDependencies": {
-    "prettier": "^3.9.0",
+    "@commitlint/cli": "^21.2.0",
+    "@commitlint/config-conventional": "^21.2.0",
     "@types/node": "^24.13.2",
-    "vite": "^8.1.0",
-    "typescript": "~6.0.2"
+    "husky": "^9.1.7",
+    "prettier": "^3.9.0",
+    "tsx": "^4.22.4",
+    "typescript": "~6.0.2",
+    "vite": "^8.1.0"
   },
   "packageManager": "npm@11.12.1"
 }

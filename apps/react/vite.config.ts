@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
 
   build: {
-    outDir: '../../dist/vue-todo',
+    outDir: '../../dist/react',
     emptyOutDir: true,
   },
 });
