@@ -1,0 +1,22 @@
+{
+  "name": "@package/fonts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./inter": {
+      "types": "./src/inter.d.ts",
+      "default": "./src/inter.css"
+    },
+    "./inter.css": {
+      "default": "./src/inter.css"
+    },
+    "./roboto": {
+      "types": "./src/roboto.d.ts",
+      "default": "./src/roboto.css"
+    },
+    "./roboto.css": {
+      "default": "./src/roboto.css"
+    }
+  }
+}
