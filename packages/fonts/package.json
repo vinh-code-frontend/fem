@@ -11,6 +11,13 @@
     "./inter.css": {
       "default": "./src/inter.css"
     },
+    "./outfit": {
+      "types": "./src/outfit.d.ts",
+      "default": "./src/outfit.css"
+    },
+    "./outfit.css": {
+      "default": "./src/outfit.css"
+    },
     "./roboto": {
       "types": "./src/roboto.d.ts",
       "default": "./src/roboto.css"

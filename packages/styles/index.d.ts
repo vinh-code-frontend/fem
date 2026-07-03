@@ -1,1 +1,1 @@
-declare module '@package/tailwindcss' {}
+declare module '@package/styles' {}

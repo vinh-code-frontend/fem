@@ -1,6 +1,10 @@
+@import '@package/fonts/outfit';
+@import '@package/fonts/inter';
+@import '@package/fonts/roboto';
 @import 'tailwindcss';
 
 @theme {
   --font-inter: 'Inter', sans-serif;
   --font-roboto: 'Roboto', sans-serif;
+  --font-outfit: 'Outfit', sans-serif;
 }
