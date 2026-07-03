@@ -1,10 +1,12 @@
+import { RouterProvider } from 'react-router';
+import { HelmetProvider } from 'react-helmet-async';
+import { router } from './router';
+
 const App = () => {
   return (
-    <div className="flex font-inter">
-      <div>child</div>
-      <div>child</div>
-      <div>child</div>
-    </div>
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
   );
 };
 

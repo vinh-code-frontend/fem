@@ -1,14 +1,18 @@
-import { defineConfig, mergeConfig } from 'vite';
+import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { sharedConfig } from '../../vite.config.ts';
+import { fileURLToPath, URL } from 'node:url';
+import tailwindcss from '@tailwindcss/vite';
 
-export default mergeConfig(
-  sharedConfig,
-  defineConfig({
-    plugins: [react()],
-    build: {
-      outDir: '../../dist/react',
-      emptyOutDir: true,
+export default defineConfig({
+  plugins: [tailwindcss(), react()],
+  resolve: {
+    alias: {
+      '@': '/src',
+      '@resource': fileURLToPath(new URL('../../resources', import.meta.url)),
     },
-  }),
-);
+  },
+  build: {
+    outDir: '../../dist/react',
+    emptyOutDir: true,
+  },
+});
