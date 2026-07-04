@@ -24,6 +24,13 @@
     },
     "./roboto.css": {
       "default": "./src/roboto.css"
+    },
+    "./ubuntu": {
+      "types": "./src/ubuntu.d.ts",
+      "default": "./src/ubuntu.css"
+    },
+    "./ubuntu.css": {
+      "default": "./src/ubuntu.css"
     }
   }
 }
