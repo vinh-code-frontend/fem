@@ -1,12 +1,14 @@
 .fem-multi-step-form {
-  --color-primary-blue-950: hsl(213, 96%, 18%);
-  --color-primary-purple-600: hsl(243, 100%, 62%);
-  --color-primary-blue-300: hsl(228, 100%, 84%);
-  --color-primary-blue-200: hsl(206, 94%, 87%);
-  --color-primary-red-500: hsl(354, 84%, 57%);
-  
-  --neutral-grey 500: hsl(231, 11%, 63%);
-  --neutral-purple 200: hsl(229, 24%, 87%);
-  --neutral-blue 100: hsl(218, 100%, 97%);
-  --neutral-blue 50: hsl(231, 100%, 99%);
+  --color-primary-blue-950: #02295a;
+  --color-primary-purple-600: #473dff;
+  --color-primary-blue-300: #adbeff;
+  --color-primary-blue-200: #bfe2fd;
+  --color-primary-red-500: #ed3548;
+
+  --bg-color: #eef5ff;
+
+  --neutral-grey-500: #9699ab;
+  --neutral-purple-200: #d6d9e6;
+  --neutral-blue-100: #f0f5ff;
+  --neutral-blue-50: hsl(231, 100%, 99%);
 }
