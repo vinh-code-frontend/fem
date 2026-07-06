@@ -3,9 +3,9 @@ import SelectPlanStep from './SelectPlanStep';
 import AddOnsStep from './AddOnsStep';
 import SummaryStep from './SummaryStep';
 import Acknowledgement from './Acknowledgement';
-import { useStepFormContext } from '../context/useStepFormContext';
-import { StepConstants, type MultiStepForm } from '../common/types';
-import StepFooter from './StepFooter';
+import { useStepFormContext } from '../../context/useStepFormContext';
+import { StepConstants, type MultiStepForm } from '../../common/types';
+import StepFooter from '../StepFooter';
 
 const renderStepContent = (form: MultiStepForm) => {
   switch (form.step) {

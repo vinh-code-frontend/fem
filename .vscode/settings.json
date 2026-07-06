@@ -15,9 +15,5 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "css.lint.unknownAtRules": "ignore",
-  "tailwindCSS.experimental.classRegex": [
-    ["bp\\(([^,]+)", "[\"'`]([^\"'`]*)[\"'`]"],
-    ["tw\\(([^)]+)", "[\"'`]([^\"'`]*)[\"'`]"]
-  ]
+  "css.lint.unknownAtRules": "ignore"
 }

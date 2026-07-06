@@ -1,0 +1,17 @@
+@reference '/src/index.css';
+
+.stepper-container {
+  @apply flex bg-cover bg-no-repeat text-white p-8 h-43 gap-4 justify-center items-start;
+
+  @variant xs {
+    @apply gap-8 flex-col h-full w-68.5 justify-start rounded-[10px];
+  }
+}
+
+.stepper-item {
+  @apply overflow-hidden flex gap-4 text-sm;
+}
+
+.stepper-count {
+  @apply font-semibold leading-4 flex justify-center items-center border rounded-full w-8 h-8;
+}
