@@ -1,0 +1,20 @@
+@reference '/src/index.css';
+
+.step-content-form-item {
+  @apply flex flex-col gap-2 leading-4;
+
+  &.is-error {
+    & input {
+      @apply border-[#EE374A]! outline-[#EE374A]!;
+    }
+  }
+
+  & label {
+    @apply text-sm text-(--color-primary-blue-950) font-medium;
+  }
+
+  & input {
+    @apply h-12 px-4 border border-(--neutral-purple-200) focus:outline-(--color-primary-purple-600) hover:border-(--color-primary-purple-600) rounded-lg;
+    @apply placeholder:text-[#9699AA] font-normal text-[16px];
+  }
+}

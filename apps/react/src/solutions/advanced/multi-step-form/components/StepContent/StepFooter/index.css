@@ -1,0 +1,9 @@
+@reference '/src/index.css';
+
+.step-content-footer {
+  @apply bg-white fixed inset-0 top-[unset] p-4 flex gap-3 items-center justify-between text-[15px];
+
+  @variant sm {
+    @apply relative inset-[unset] px-0 text-[16px];
+  }
+}

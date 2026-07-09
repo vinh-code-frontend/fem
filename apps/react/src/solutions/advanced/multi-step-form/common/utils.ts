@@ -10,7 +10,7 @@ export const initMultiStepForm = (): MultiStepForm => {
     step: StepConstants.GetInfo,
     isConfirmed: false,
     billingPeriod: 'monthly',
-    billingType: 'advanced',
+    billingType: 'arcade',
     addons: {
       onlineService: false,
       largerStorage: false,

@@ -7,9 +7,11 @@ export const StepConstants = {
   Summary: 4,
 } as const;
 
-export type BillingType = 'arcade' | 'advanced' | 'pro';
+export const BillingTypeConstants = ['arcade', 'advanced', 'pro'] as const;
+export const BillingPeriodConstants = ['monthly', 'yearly'] as const;
 
-export type BillingPeriod = 'monthly' | 'yearly';
+export type BillingType = (typeof BillingTypeConstants)[number];
+export type BillingPeriod = (typeof BillingPeriodConstants)[number];
 
 export type AddOns = {
   onlineService: boolean;

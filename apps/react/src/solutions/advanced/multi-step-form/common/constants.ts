@@ -4,7 +4,7 @@ export const stepMenu = [
   {
     step: StepConstants.GetInfo,
     title: `Step ${StepConstants.GetInfo}`,
-    description: 'Get Info',
+    description: 'Your Info',
   },
   {
     step: StepConstants.SelectPlan,
