@@ -16,4 +16,12 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "css.lint.unknownAtRules": "ignore"
+  // "tailwindCSS.validate": true,
+  // "editor.quickSuggestions": {
+  //   "strings": "on"
+  // },
+  // "tailwindCSS.experimental.configFile": null,
+  // "tailwindCSS.lint.invalidHtmlAnalysis": "warning",
+  // "tailwindCSS.lint.recommendedVariantOrder": "warning",
+  // "tailwindCSS.lint.stylesheetVariants": "warning"
 }
