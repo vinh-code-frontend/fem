@@ -1,5 +1,5 @@
 feat
-fix
+fixs
 docs
 style
 refactor
@@ -9,3 +9,4 @@ build
 ci
 chore
 revert
+chore
