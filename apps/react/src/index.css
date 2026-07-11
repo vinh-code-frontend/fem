@@ -1,1 +1,21 @@
-@import '@package/styles';
+@import '@package/fonts/outfit';
+@import '@package/fonts/inter';
+@import '@package/fonts/roboto';
+@import '@package/fonts/ubuntu';
+@import 'tailwindcss';
+
+@import './solutions/intermediate/foreign-exchange-checker/assets/css/index.css';
+
+@theme {
+  --font-inter: 'Inter', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+  --font-outfit: 'Outfit', sans-serif;
+  --font-ubuntu: 'Ubuntu', sans-serif;
+
+  --breakpoint-xs: 30rem; /* 480px */
+  --breakpoint-sm: 40rem; /* 640px */
+  --breakpoint-md: 48rem; /* 768px */
+  --breakpoint-lg: 64rem; /* 1024px */
+  --breakpoint-xl: 80rem; /* 1280px */
+  --breakpoint-2xl: 96rem; /* 1536px */
+}

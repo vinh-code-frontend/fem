@@ -2,9 +2,9 @@ import { createBrowserRouter, type RouteObject } from 'react-router';
 import RootLayout from '../layouts/RootLayout';
 import { lazy } from 'react';
 import MultiStepForm from '@/solutions/advanced/multi-step-form';
+import { foreignExchangeCheckerRoutes } from '@/solutions/intermediate/foreign-exchange-checker/routes';
 
 const NotFoundLayout = lazy(() => import('@/layouts/NotFoundLayout'));
-
 const QRCodePage = lazy(() => import('@/solutions/newbie/qr-code-component'));
 
 export const solutionRoutes: RouteObject[] = [
@@ -16,6 +16,10 @@ export const solutionRoutes: RouteObject[] = [
         element: <QRCodePage />,
       },
     ],
+  },
+  {
+    path: 'intermediate',
+    children: [foreignExchangeCheckerRoutes],
   },
   {
     path: 'advanced',

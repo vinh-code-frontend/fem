@@ -11,6 +11,13 @@
     "./inter.css": {
       "default": "./src/inter.css"
     },
+    "./jetbrains-mono": {
+      "types": "./src/jetbrains-mono.d.ts",
+      "default": "./src/jetbrains-mono.css"
+    },
+    "./jetbrains-mono.css": {
+      "default": "./src/jetbrains-mono.css"
+    },
     "./outfit": {
       "types": "./src/outfit.d.ts",
       "default": "./src/outfit.css"

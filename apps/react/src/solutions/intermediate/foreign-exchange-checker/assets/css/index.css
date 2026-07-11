@@ -1,0 +1,22 @@
+@theme {
+  /* Neutral */
+  --color-fec-neutral-900: #0a0a0a;
+  --color-fec-neutral-700: #171719;
+  --color-fec-neutral-600: #202022;
+  --color-fec-neutral-500: #2e2e2e;
+  --color-fec-neutral-400: #3d3d3d;
+  --color-fec-neutral-300: #454547;
+  --color-fec-neutral-200: #9d9d9d;
+  --color-fec-neutral-100: #c6c6c6;
+  --color-fec-neutral-50: #ffffff;
+
+  /* Lime */
+  --color-fec-lime-500: #cef739;
+  --color-fec-lime-800: #283300;
+
+  /* Green */
+  --color-fec-green-500: #42eb05;
+
+  /* Red */
+  --color-fec-red-500: #ff4141;
+}
