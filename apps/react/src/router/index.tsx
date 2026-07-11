@@ -1,11 +1,11 @@
 import { createBrowserRouter, type RouteObject } from 'react-router';
 import RootLayout from '../layouts/RootLayout';
 import { lazy } from 'react';
+import MultiStepForm from '@/solutions/advanced/multi-step-form';
 
 const NotFoundLayout = lazy(() => import('@/layouts/NotFoundLayout'));
 
 const QRCodePage = lazy(() => import('@/solutions/newbie/qr-code-component'));
-const MultiStepForm = lazy(() => import('@/solutions/advanced/multi-step-form'));
 
 export const solutionRoutes: RouteObject[] = [
   {
