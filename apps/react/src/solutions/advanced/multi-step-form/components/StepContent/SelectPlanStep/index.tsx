@@ -1,35 +1,11 @@
-import { BillingTypeConstants, type BillingPeriod, type BillingType } from '../../../common/types';
+import { BillingTypeConstants } from '../../../common/types';
 import { useStepFormContext } from '../../../context/useStepFormContext';
+import { mapIcon, getExpense, mapUnit } from '../../../features/form';
 import Card from '../../shared/Card';
 import StepLayout from '../../shared/StepLayout';
 import { Switch } from '../../shared/Switch';
-import IconArcade from '@resource/advanced/multi-step-form/images/icon-arcade.svg';
-import IconAdvanced from '@resource/advanced/multi-step-form/images/icon-advanced.svg';
-import IconPro from '@resource/advanced/multi-step-form/images/icon-pro.svg';
+
 import { capitalize } from 'lodash-es';
-
-const mapExpense: Record<BillingType, number> = {
-  arcade: 9,
-  advanced: 12,
-  pro: 15,
-};
-
-const mapIcon: Record<BillingType, string> = {
-  arcade: IconArcade,
-  advanced: IconAdvanced,
-  pro: IconPro,
-};
-
-const mapUnit: Record<BillingPeriod, string> = {
-  monthly: 'mo',
-  yearly: 'yr',
-};
-
-const getExpense = (type: BillingType, period: BillingPeriod) => {
-  const expense = mapExpense[type];
-
-  return period === 'monthly' ? expense : expense * 10;
-};
 
 const SelectPlanStep = () => {
   const { form, setForm } = useStepFormContext();

@@ -1,33 +1,31 @@
 import { useStepFormContext } from '../../context/useStepFormContext';
-import { type MultiStepForm } from '../../common/types';
-
 import { stepMenu } from '../../common/constants';
 import './index.css';
-import { getStepMenuBg } from '../../common/utils';
-import { useMediaQuery } from '@/hooks';
+import clsx from 'clsx';
+import sidebarBgDesktop from '@resource/advanced/multi-step-form/images/bg-sidebar-desktop.svg';
+import sidebarBgMobile from '@resource/advanced/multi-step-form/images/bg-sidebar-mobile.svg';
 
 const Stepper = () => {
-  const { form, setForm } = useStepFormContext();
-  const isMobile = useMediaQuery('(max-width: 639px)');
-  console.log(isMobile);
+  const { form } = useStepFormContext();
 
-  const activeStep =
-    'text-(--color-primary-blue-950) border-(--color-primary-blue-200) bg-(--color-primary-blue-200)';
-
-  const passedStep = ``;
-
-  const handleChangeStep = (newStep: MultiStepForm['step']) => {
-    setForm((prev) => ({
-      ...prev,
-      step: newStep,
-    }));
-  };
   return (
-    <div className="stepper-container" style={{ backgroundImage: getStepMenuBg(isMobile) }}>
+    <div className="stepper-container">
+      <div
+        className="absolute inset-0 z-0 sm:hidden bg-cover bg-no-repeat"
+        style={{ backgroundImage: `url("${sidebarBgMobile}")` }}
+      ></div>
+      <div
+        className="absolute inset-0 z-0 hidden sm:block bg-cover bg-no-repeat"
+        style={{ backgroundImage: `url("${sidebarBgDesktop}")` }}
+      ></div>
       {stepMenu.map((item) => (
-        <div className="stepper-item" key={item.step} onClick={() => handleChangeStep(item.step)}>
+        <div className="stepper-item z-1" key={item.step}>
           <div
-            className={`stepper-count ${form.step === item.step && activeStep} ${form.step > item.step && passedStep}`}
+            className={clsx([
+              `stepper-count`,
+              form.step === item.step &&
+                'text-(--color-primary-blue-950) border-(--color-primary-blue-200) bg-(--color-primary-blue-200)',
+            ])}
           >
             {item.step}
           </div>

@@ -1,5 +1,4 @@
 import '@resource/advanced/multi-step-form/css/index.css';
-
 import StepContent from './components/StepContent';
 import Stepper from './components/Stepper';
 import StepFormProvider from './context/StepFormProvider';

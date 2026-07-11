@@ -1,7 +1,7 @@
 @reference '/src/index.css';
 
 .stepper-container {
-  @apply flex bg-cover bg-no-repeat text-white p-8 h-43 gap-4 justify-center items-start transition-all;
+  @apply flex text-white p-8 h-43 gap-4 justify-center items-start transition-all relative;
 
   @variant sm {
     @apply gap-8 flex-col h-full w-56 justify-start rounded-[10px];

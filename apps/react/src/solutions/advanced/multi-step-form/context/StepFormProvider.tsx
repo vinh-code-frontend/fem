@@ -1,6 +1,6 @@
 import { useState, type ReactNode } from 'react';
-import { initMultiStepForm } from '../common/utils';
 import { StepFormContext } from './useStepFormContext';
+import { initMultiStepForm } from '../features/form';
 
 const StepFormProvider = ({ children }: { children: ReactNode }) => {
   const [form, setForm] = useState(initMultiStepForm());

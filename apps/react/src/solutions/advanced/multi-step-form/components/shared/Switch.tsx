@@ -24,7 +24,7 @@ export const Switch = ({
       <button
         type="button"
         onClick={() => onChange(!checked)}
-        className={`relative h-5 w-9.5 rounded-full transition bg-[#02295a]`}
+        className={`relative h-5 w-9.5 rounded-full transition cursor-pointer bg-[#02295a]`}
       >
         <span
           className={`absolute top-1 left-1 h-3 w-3 rounded-full bg-white transition ${

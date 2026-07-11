@@ -1,6 +1,5 @@
 import z from 'zod';
 import { useFormContext } from 'react-hook-form';
-import './index.css';
 import { FormItem } from '../../shared/FormItem';
 import StepLayout from '../../shared/StepLayout';
 

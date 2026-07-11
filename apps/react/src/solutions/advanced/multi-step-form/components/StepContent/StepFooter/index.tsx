@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { StepConstants, type MultiStepForm } from '../../../common/types';
 import { useStepFormContext } from '../../../context/useStepFormContext';
 import { useFormContext } from 'react-hook-form';
@@ -9,19 +10,8 @@ const StepFooter = () => {
   const { handleSubmit } = useFormContext<RegisterFormData>();
   const isSummary = form.step === StepConstants.Summary;
 
-  const backStepClassName = `
-    ${form.step <= StepConstants.GetInfo ? 'invisible' : ''}
-    select-none transition cursor-pointer text-(--neutral-grey-500) hover:text-(--color-primary-blue-950)
-  `;
-
-  const nextStepClassName = `
-    ${form.step >= StepConstants.Summary && form.isConfirmed ? 'invisible' : ''}
-    ${isSummary ? 'bg-(--color-primary-purple-600)' : 'bg-(--color-primary-blue-950)'}
-    select-none transition cursor-pointer py-3 px-6 rounded-lg inline-block leading-4.5 text-white hover:opacity-75
-  `;
-
   const handleBackStep = () => {
-    if (form.step <= StepConstants.GetInfo) {
+    if (isSummary && form.isConfirmed) {
       return;
     }
     setForm((prev) => ({
@@ -62,11 +52,26 @@ const StepFooter = () => {
   };
   return (
     <div className="step-content-footer ">
-      <div className={backStepClassName} onClick={handleBackStep}>
+      <div
+        className={clsx(
+          'cursor-pointer font-semibold transition text-(--neutral-grey-500) hover:text-(--color-primary-blue-950)',
+          (isSummary && form.isConfirmed) || form.step <= StepConstants.GetInfo
+            ? 'invisible'
+            : 'visible',
+        )}
+        onClick={handleBackStep}
+      >
         Go back
       </div>
 
-      <div className={nextStepClassName} onClick={isSummary ? handleConfirm : handleNextStep}>
+      <div
+        className={clsx(
+          'transition cursor-pointer py-3 px-6 rounded-lg inline-block leading-4.5 text-white hover:opacity-75',
+          form.step >= StepConstants.Summary && form.isConfirmed ? 'invisible' : 'visible',
+          isSummary ? 'bg-(--color-primary-purple-600)' : 'bg-(--color-primary-blue-950)',
+        )}
+        onClick={isSummary ? handleConfirm : handleNextStep}
+      >
         {isSummary ? 'Confirm' : 'Next Step'}
       </div>
     </div>

@@ -1,7 +1,7 @@
 @reference '/src/index.css';
 
 .step-content-form-item {
-  @apply flex flex-col gap-2 leading-4;
+  @apply flex flex-col gap-2 leading-4 transition-all;
 
   &.is-error {
     & input {
