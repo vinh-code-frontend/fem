@@ -15,7 +15,7 @@ export default function Checkbox({ checked, onChange, disabled, className }: Che
         checked={checked}
         disabled={disabled}
         onChange={(e) => onChange(e.target.checked)}
-        className="sr-only peer hidden"
+        className="sr-only peer absolute"
       />
 
       <span

@@ -16,7 +16,9 @@ export const FormItem = ({ error, label, children, name }: FormFieldProps) => {
       <div className="flex gap-2 justify-between">
         <label htmlFor={name}>{label}</label>
         {error?.message ? (
-          <p className="text-sm text-red-500 font-semibold">{error.message}</p>
+          <p className="text-sm text-red-500 font-semibold" aria-describedby={name}>
+            {error.message}
+          </p>
         ) : null}
       </div>
       {children}

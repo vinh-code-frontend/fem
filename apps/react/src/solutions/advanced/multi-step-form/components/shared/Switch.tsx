@@ -23,6 +23,7 @@ export const Switch = ({
       </span>
       <button
         type="button"
+        aria-label="Toggle billing period"
         onClick={() => onChange(!checked)}
         className={`relative h-5 w-9.5 rounded-full transition cursor-pointer bg-[#02295a]`}
       >

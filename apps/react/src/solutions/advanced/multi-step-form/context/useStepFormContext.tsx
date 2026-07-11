@@ -12,7 +12,7 @@ export const useStepFormContext = () => {
   const context = useContext(StepFormContext);
 
   if (!context) {
-    throw new Error('useFormContext must be used inside StepFormContext');
+    throw new Error('useStepFormContext ntext must be used inside StepFormContext');
   }
 
   return context;

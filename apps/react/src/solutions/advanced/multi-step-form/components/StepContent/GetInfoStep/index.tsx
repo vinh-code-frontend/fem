@@ -28,7 +28,7 @@ const GetInfoStep = () => {
             id="name"
             {...register('name')}
             placeholder="e.g. Stephen King"
-            autoComplete="false"
+            autoComplete="off"
           />
         </FormItem>
         <FormItem name="email" label="Email Address" error={errors.email}>
@@ -37,7 +37,7 @@ const GetInfoStep = () => {
             type="email"
             {...register('email')}
             placeholder="e.g. stephenking@lorem.com"
-            autoComplete="false"
+            autoComplete="off"
           />
         </FormItem>
         <FormItem name="phone" label="Phone Number" error={errors.phone}>
@@ -45,7 +45,7 @@ const GetInfoStep = () => {
             id="phone"
             {...register('phone')}
             placeholder="e.g. +1 234 567 890"
-            autoComplete="false"
+            autoComplete="off"
           />
         </FormItem>
       </div>

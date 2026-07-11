@@ -24,7 +24,7 @@ const SelectPlanStep = () => {
             className="md:flex-1"
           >
             <div className="flex gap-4 items-center sm:flex-col sm:items-start sm:gap-10">
-              <img src={mapIcon[item]} />
+              <img src={mapIcon[item]} alt={`Icon of ${mapIcon[item]}`} />
               <div className="flex flex-col gap-1">
                 <div className="leading-[18px] font-bold text-[#022959]">{capitalize(item)}</div>
                 <div className="leading-[16px] font-normal text-sm text-[#9699AA]">{`$${getExpense(item, form.billingPeriod)}/${mapUnit[form.billingPeriod]}`}</div>

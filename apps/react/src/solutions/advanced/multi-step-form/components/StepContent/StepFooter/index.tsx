@@ -22,7 +22,8 @@ const StepFooter = () => {
 
   const handleNextStep = () => {
     if (form.step === StepConstants.GetInfo) {
-      void handleSubmit((data) => {
+      // this will auto focus to the first field
+      handleSubmit((data) => {
         setForm((prev) => ({
           ...prev,
           name: data.name,
@@ -52,7 +53,7 @@ const StepFooter = () => {
   };
   return (
     <div className="step-content-footer ">
-      <div
+      <button
         className={clsx(
           'cursor-pointer font-semibold transition text-(--neutral-grey-500) hover:text-(--color-primary-blue-950)',
           (isSummary && form.isConfirmed) || form.step <= StepConstants.GetInfo
@@ -62,9 +63,9 @@ const StepFooter = () => {
         onClick={handleBackStep}
       >
         Go back
-      </div>
+      </button>
 
-      <div
+      <button
         className={clsx(
           'transition cursor-pointer py-3 px-6 rounded-lg inline-block leading-4.5 text-white hover:opacity-75',
           form.step >= StepConstants.Summary && form.isConfirmed ? 'invisible' : 'visible',
@@ -73,7 +74,7 @@ const StepFooter = () => {
         onClick={isSummary ? handleConfirm : handleNextStep}
       >
         {isSummary ? 'Confirm' : 'Next Step'}
-      </div>
+      </button>
     </div>
   );
 };
