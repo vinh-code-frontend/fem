@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@package/fonts": "*",
-    "@package/styles": "*",
     "vue": "^3.5.38"
   },
   "devDependencies": {

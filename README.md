@@ -104,12 +104,6 @@ import QrImage from '@resource/newbie/qr-code-component/images/image-qr-code.png
 
 - Exposes CSS entries for Inter, Outfit, and Roboto.
 
-`@package/styles`
-
-- Imports Tailwind CSS v4.
-- Imports shared fonts.
-- Declares global font theme variables.
-
 ## Challenge Status
 
 | Framework | Challenge                  | Status                                   |
@@ -131,7 +125,7 @@ import QrImage from '@resource/newbie/qr-code-component/images/image-qr-code.png
 
 1. Add challenge assets to `resources/<level>/<challenge-name>/`.
 2. Create a page/component in `apps/vue/src/solutions/...`.
-3. Import shared styles from `@package/styles` and assets via `@resource`.
+3. Import shared assets via `@resource`.
 4. Mount in `App.vue` or add Vue Router integration as the app grows.
 
 ## Deploy Notes
