@@ -29,11 +29,13 @@ const renderStepContent = (form: MultiStepForm) => {
   }
 };
 
+const resolver = zodResolver(registerSchema);
+
 const StepContent = () => {
   const { form } = useStepFormContext();
 
   const methods = useForm<RegisterFormData>({
-    resolver: zodResolver(registerSchema),
+    resolver,
     defaultValues: {
       name: form.name,
       email: form.email,
