@@ -1,12 +1,17 @@
 import { Outlet } from 'react-router';
 import './assets/css/index.css';
+import ThemeProvider from './contexts/themeContext';
+import Header from './shared/components/Header';
 
 const ForeignExchangeChecker = () => {
   return (
-    <main id="exchange-checker">
-      <p className="">ForeignExchangeChecker</p>
-      <Outlet />
-    </main>
+    <ThemeProvider>
+      <main id="fec">
+        <Header />
+        <p className=" bg-fec-">ForeignExchangeChecker</p>
+        <Outlet />
+      </main>
+    </ThemeProvider>
   );
 };
 

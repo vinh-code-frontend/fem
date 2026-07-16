@@ -1,5 +1,9 @@
+/* ======================== */
+/* Raw Palette              */
+/* ======================== */
+
 @theme {
-  /* Neutral */
+  /* Neutral - Dark */
   --color-fec-neutral-900: #0a0a0a;
   --color-fec-neutral-700: #171719;
   --color-fec-neutral-600: #202022;
@@ -10,6 +14,17 @@
   --color-fec-neutral-100: #c6c6c6;
   --color-fec-neutral-50: #ffffff;
 
+  /* Neutral - Light */
+  --color-fec-neutral-l-900: #171717;
+  --color-fec-neutral-l-600: #404040;
+  --color-fec-neutral-l-400: #737373;
+  --color-fec-neutral-l-300: #d4d4d4;
+  --color-fec-neutral-l-200: #e5e5e5;
+  --color-fec-neutral-l-100: #eeeeee;
+  --color-fec-neutral-l-75: #f5f5f5;
+  --color-fec-neutral-l-50: #fafafa;
+  --color-fec-neutral-l-0: #ffffff;
+
   /* Lime */
   --color-fec-lime-500: #cef739;
   --color-fec-lime-800: #283300;
@@ -19,4 +34,73 @@
 
   /* Red */
   --color-fec-red-500: #ff4141;
+}
+
+/* ======================== */
+/* Semantic Tokens          */
+/* bg-fec-bg, text-fec-text */
+/* ======================== */
+
+@theme inline {
+  /* Background layers */
+  --color-fec-bg: var(--fec-bg);
+  --color-fec-surface: var(--fec-surface);
+  --color-fec-surface-raised: var(--fec-surface-raised);
+  --color-fec-overlay: var(--fec-overlay);
+
+  /* Borders */
+  --color-fec-border: var(--fec-border);
+  --color-fec-border-strong: var(--fec-border-strong);
+
+  /* Text */
+  --color-fec-text: var(--fec-text);
+  --color-fec-text-secondary: var(--fec-text-secondary);
+  --color-fec-text-muted: var(--fec-text-muted);
+
+  /* Accent */
+  --color-fec-accent: var(--fec-accent);
+  --color-fec-accent-surface: var(--fec-accent-surface);
+  --color-fec-positive: var(--fec-positive);
+  --color-fec-negative: var(--fec-negative);
+}
+
+/* ======================== */
+/* Dark Theme (default)     */
+/* ======================== */
+
+:root {
+  --fec-bg: #0a0a0a;
+  --fec-surface: #171719;
+  --fec-surface-raised: #202022;
+  --fec-overlay: #2e2e2e;
+  --fec-border: #3d3d3d;
+  --fec-border-strong: #454547;
+  --fec-text: #ffffff;
+  --fec-text-secondary: #c6c6c6;
+  --fec-text-muted: #9d9d9d;
+  --fec-accent: #cef739;
+  --fec-accent-surface: #283300;
+  --fec-positive: #42eb05;
+  --fec-negative: #ff4141;
+}
+
+/* ======================== */
+/* Light Theme              */
+/* ======================== */
+
+.theme-light,
+[data-theme='light'] {
+  --fec-bg: #ffffff;
+  --fec-surface: #fafafa;
+  --fec-surface-raised: #f5f5f5;
+  --fec-overlay: #eeeeee;
+  --fec-border: #e5e5e5;
+  --fec-border-strong: #d4d4d4;
+  --fec-text: #171717;
+  --fec-text-secondary: #404040;
+  --fec-text-muted: #737373;
+  --fec-accent: #cef739;
+  --fec-accent-surface: #283300;
+  --fec-positive: #42eb05;
+  --fec-negative: #ff4141;
 }
